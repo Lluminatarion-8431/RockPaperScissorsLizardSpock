@@ -9,11 +9,13 @@ namespace RPSLS
     class ChosenGesture
     {
         //Member Variables
+        public List<string> losesTo;
+        public string type;
 
         //Constructor
 
         //Member Methods
 
-        
+
     }
 }

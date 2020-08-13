@@ -8,5 +8,12 @@ namespace RPSLS
 {
     class ChosenGesture
     {
+        //Member Variables
+
+        //Constructor
+
+        //Member Methods
+
+        
     }
 }

@@ -8,5 +8,15 @@ namespace RPSLS
 {
     class Game
     {
+        //Member Variables
+        public int pointsNeededToWin;
+        public List<string> gestures;
+        public List<string> actions;
+        public string gameType;
+        public Player playerOne;
+        public Player playerTwo;
+        //Constructor
+
+        //Member Methods
     }
 }

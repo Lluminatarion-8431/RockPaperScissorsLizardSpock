@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Computer
+    class Computer : Player
     {
+        //Member Variables
+        public Random random;
+        //Constructor
+
+        //Member Methods
     }
 }

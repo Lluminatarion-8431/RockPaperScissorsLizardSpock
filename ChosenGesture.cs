@@ -13,7 +13,11 @@ namespace RPSLS
         public string type;
 
         //Constructor
-
+        public ChosenGesture(string type, List<string> losesTo)
+        {
+            this.type = type;
+            this.losesTo = losesTo;
+        }
         //Member Methods
 
 

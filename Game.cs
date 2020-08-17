@@ -21,6 +21,7 @@ namespace RPSLS
         {
             pointsNeededToWin = 3;
             playerOne = new Human();
+            //An array of gestures and actions to reference back to within my DisplayRules method object
             gestures = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
             actions = new List<string>() { "crushes", "cuts", "covers", "poisons", "smashes", "decapitates", "eats", "disproves", "vaporizes" };
         }
@@ -34,7 +35,7 @@ namespace RPSLS
         {
 
         }
-        public void ChooseGameMode()
+        public string ChooseGameMode()
         {
             Console.WriteLine("Which type of game would you like play?");
             Console.WriteLine("1: Human vs. Human");
@@ -76,6 +77,42 @@ namespace RPSLS
 
                 }
             } 
+        }
+
+        public void PlayAgain()
+        {
+            Console.WriteLine("Would you like to go another round? yes or no");
+            string playAgain = Console.ReadLine();
+
+            if (playAgain == "yes")
+            {
+                RunGame();
+            } 
+            else
+            {
+                Console.WriteLine("That ends the game, thanks for playing.");
+                Console.ReadLine();
+            }
+        }
+        public void RunGame()
+        {
+            string select = ChooseGameMode();
+            ChooseTypeOfPlayerTwo(select);
+            while (playerOne.score < 3 && playerTwo.score < 3)
+            {
+                Battle()
+            }
+
+            if (playerOne.score > playerTwo.score)
+            {
+                Console.WriteLine("{0} KILLED IT!!!", playerOne.name);
+                PlayAgain();
+            }
+            else
+            {
+                Console.WriteLine("{0} KILLED IT!!!", playerTwo.name);
+                PlayAgain();
+            }
         }
     }
 }

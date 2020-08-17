@@ -27,10 +27,6 @@ namespace RPSLS
         }
 
         //Member Methods (Can do)
-        public void RunGame()
-        {
-
-        }
         public void DisplayRules()
         {
 
@@ -43,7 +39,7 @@ namespace RPSLS
             gameType = Console.ReadLine();
             return gameType;
         }
-        public void ChooseTypeOfPlayerTwo()
+        public void ChooseTypeOfPlayerTwo(string userInput)
         {
             //switch-case object
             //instantiates playerTwo as Human or Computer
@@ -113,6 +109,12 @@ namespace RPSLS
                 Console.WriteLine("{0} KILLED IT!!!", playerTwo.name);
                 PlayAgain();
             }
+        }
+        public void Battle()
+        {
+            playerOne.ChooseGesture();
+            playerTwo.ChooseGesture();
+
         }
     }
 }

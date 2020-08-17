@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    abstract class Human : Player
+    class Human : Player
     {
-        //Member Variables
+        //Member Variables (Has a)
 
-        //Constructor
+        //Constructor (Spawner)
         public Human()
         {
 
         }
-        //Member Methods
+
+        //Member Methods (Can do)
         public override void SetName()
         {
             Console.WriteLine("Please enter in your name:");

@@ -8,12 +8,13 @@ namespace RPSLS
 {
     abstract class Player
     {
-        //Member Variables
+        //Member Variables (Has a)
         public string name;
         public int score;
         public ChosenGesture playerChoice;
         public List<ChosenGesture> gestureOptions;
-        //Constructor
+
+        //Constructor (Spawner)
         public Player()
         {
             gestureOptions = new List<ChosenGesture>()
@@ -25,7 +26,8 @@ namespace RPSLS
                 new ChosenGesture("Spock", new List<string>(){"Paper","Lizard"})
             };
         }
-        //Member Methods
+
+        //Member Methods (Can do)
         public abstract void ChooseGesture();
         public abstract void SetName();
     }

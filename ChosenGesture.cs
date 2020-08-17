@@ -8,17 +8,17 @@ namespace RPSLS
 {
     class ChosenGesture
     {
-        //Member Variables
+        //Member Variables (Has a)
         public List<string> losesTo;
         public string type;
 
-        //Constructor
+        //Constructor (Spawner)
         public ChosenGesture(string type, List<string> losesTo)
         {
             this.type = type;
             this.losesTo = losesTo;
         }
-        //Member Methods
+        //Member Methods (Can do)
 
 
     }

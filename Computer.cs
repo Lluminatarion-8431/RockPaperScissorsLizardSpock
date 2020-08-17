@@ -8,15 +8,16 @@ namespace RPSLS
 {
     class Computer : Player
     {
-        //Member Variables
+        //Member Variables (Has a)
         public Random random;
-        //Constructor
+
+        //Constructor (Spawner)
         public Computer()
         {
             random = new Random();
         }
 
-        //Member Methods
+        //Member Methods (Can do)
         public override void SetName()
         {
             name = "Computer";

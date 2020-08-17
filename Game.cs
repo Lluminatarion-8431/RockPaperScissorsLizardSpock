@@ -61,7 +61,7 @@ namespace RPSLS
                     case "2":
                         playerOne = new Human();
                         playerOne.SetName();
-                        playerTwo = new Computer;
+                        playerTwo = new Computer();
                         playerTwo.SetName();
                         gameSelected = true;
                         break;
@@ -96,7 +96,7 @@ namespace RPSLS
             ChooseTypeOfPlayerTwo(select);
             while (playerOne.score < 3 && playerTwo.score < 3)
             {
-                Battle()
+                Battle();
             }
 
             if (playerOne.score > playerTwo.score)
@@ -115,6 +115,24 @@ namespace RPSLS
             playerOne.ChooseGesture();
             playerTwo.ChooseGesture();
 
+            if (playerOne.playerChoice.type == playerTwo.playerChoice.type)
+            {
+                Console.WriteLine("{0}:{1}\t{2}:{3}", playerOne.name, playerOne.playerChoice.type, playerTwo.name, playerTwo.playerChoice.type);
+                Console.WriteLine("TIE!");
+                Battle();
+            }
+            else if (playerOne.playerChoice.losesTo.Contains(playerTwo.playerChoice.type))
+            {
+                Console.WriteLine("{0}:{1}\t{2}:{3}", playerOne.name, playerOne.playerChoice.type, playerTwo.name, playerTwo.playerChoice.type);
+                Console.WriteLine("{0} Dominated this match\n", playerTwo.name);
+                playerTwo.score++;
+            }
+            else
+            {
+                Console.WriteLine("{0}:{1}\t{2}:{3}", playerOne.name, playerTwo.playerChoice.type, playerTwo.name, playerTwo.playerChoice.type);
+                Console.WriteLine("{0} Dominated this match\n", playerOne.name);
+                playerOne.score++;
+            }
         }
     }
 }

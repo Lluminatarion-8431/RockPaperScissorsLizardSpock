@@ -29,7 +29,22 @@ namespace RPSLS
         //Member Methods (Can do)
         public void DisplayRules()
         {
-
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock");
+            Console.WriteLine("These are the rules.");
+            Console.WriteLine("{0} {1} {2}", gestures[0], actions[0], gestures[2]);//Rock crushes scissors
+            Console.WriteLine("{0} {1} {2}", gestures[2], actions[1], gestures[1]);//Scissors cuts paper
+            Console.WriteLine("{0} {1} {2}", gestures[1], actions[2], gestures[0]);//Paper covers rock
+            Console.WriteLine("{0} {1} {2}", gestures[0], actions[0], gestures[3]);//Rock crushes lizard
+            Console.WriteLine("{0} {1} {2}", gestures[3], actions[3], gestures[4]);//Lizard poisons poisons spock
+            Console.WriteLine("{0} {1} {2}", gestures[4], actions[4], gestures[2]);//Spock smashes scissors
+            Console.WriteLine("{0} {1} {2}", gestures[2], actions[5], gestures[3]);//Scissors decapitates lizard
+            Console.WriteLine("{0} {1} {2}", gestures[3], actions[6], gestures[1]);//Lizard eats paper
+            Console.WriteLine("{0} {1} {2}", gestures[1], actions[7], gestures[4]);//Paper disproves Spock
+            Console.WriteLine("{0} {1} {2}", gestures[4], actions[8], gestures[0]);//Spock vaporizes rock
+            Console.WriteLine("");
+            Console.WriteLine("Press enter to continue:");
+            Console.ReadLine();
+            Console.Clear();
         }
         public string ChooseGameMode()
         {
